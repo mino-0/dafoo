@@ -1,0 +1,145 @@
+.Nutrition_Summary {
+    width: 25%;
+    height: 100px;
+    float: left;
+    border: 1px solid crimson;
+}
+.addOption{
+    width: 100%;
+    margin-top: 25px;
+}
+div.nutrition_facts {
+    background-color: #FFF;
+    border: 2px solid #BCBCBC;
+    font-family: "Arial";
+    padding: 15px 9px 24px;
+    text-align: left;
+    transform: scale(1.22);
+    margin: 0 25px 0 -40px;
+}
+div.nutrition_facts table {
+    border-collapse: collapse;
+    border-spacing: 0px;
+    width: 100%;
+}
+div.nutrition_facts .black {
+    font-weight: 900;
+}
+div.nutrition_facts .heading {
+    font-size: 22px;
+    line-height: 22px;
+    padding-bottom: 10px;
+}
+div.nutrition_facts .left {
+    float: left;
+}
+div.nutrition_facts .right {
+    float: right;
+}
+div.nutrition_facts .tRight {
+    text-align: right;
+}
+div.nutrition_facts .divider {
+    border-bottom: solid rgba(0, 0, 0, 0.38);
+    clear: both;
+}
+div.nutrition_facts .divider.thin {
+    border-width: 1px;
+}
+div.nutrition_facts .divider.medium {
+    border-width: 4px;
+}
+div.nutrition_facts .divider.thick {
+    border-width: 11px;
+}
+div.nutrition_facts .serving_size {
+    font-size: 13px;
+    line-height: 15px;
+}
+div.nutrition_facts .serving_size.serving_size_label {
+    padding-top:8px;
+}
+div.nutrition_facts .serving_size.serving_size_value {
+    padding: 6px 0px 11px;
+    text-align: right;
+}
+div.nutrition_facts .per_serve::first-letter {
+    text-transform: uppercase;
+}
+div.nutrition_facts .nutrient {
+    font-size: 11px;
+    line-height: 11px;
+    padding: 4px 0px;
+}
+div.nutrition_facts .nutrient.header {
+    padding: 8px 0px;
+}
+div.nutrition_facts .nutrient.sub {
+    text-indent: 11px;
+}
+div.nutrition_facts .nutrient.value {
+    padding-left:8px;
+}
+div.nutrition_facts .footnote {
+    font-size: 9px;
+    line-height: 11px;
+    padding-top: 10px;
+}
+/* Start International */
+
+#content td.factPanel {
+    background-color:#EDF1E9;
+    padding:5px;
+}
+
+
+table.spaced {
+    margin-top:5px;
+}
+
+div.factPanel {
+    background-color:#EDF1E9;
+    padding:10px;
+}
+td.fact {
+    background-color:#FFF;
+    border:2px solid #BCBCBC;
+    height:44px;
+    padding-top:7px;
+    text-align:center;
+    vertical-align:top;
+    width:105px;
+}
+div.factTitle {
+    color:#333;
+    font-size:14px;
+    font-weight:bold;
+}
+div.factValue {
+    font-size:14px;
+}
+/*------------------------------------------*/
+.ui-menu {
+    min-height: 40px;
+    max-height: 200px;
+    padding: 1px;
+    overflow: auto;
+}
+div.input-group{
+    padding-top:50px;
+}
+#searchResult {
+    padding: 115px;
+}
+.noSearch{
+    padding: 180px 0;
+}
+.panel{
+    overflow: hidden;
+    margin-top:-45px;
+    margin-left:65px;
+}
+#searchFood{
+    height: 37px;
+    padding: 8px 12px;
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+    <th:block th:fragment="header">
+        <!--PreLoader-->
+        <div class="loader">
+            <div class="loader-inner">
+                <div class="circle"></div>
+            </div>
+        </div>
+        <!--PreLoader Ends-->
+
+        <!-- header -->
+        <div class="top-header-area" id="sticker">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-sm-12 text-center">
+                        <div class="main-menu-wrap">
+                            <!-- logo -->
+                            <div class="site-logo">
+                                <a th:href="@{/}" href="/">
+                                    <img th:src="@{/assets/img/logo.png}" src="assets/img/logo.png" alt="">
+                                </a>
+                            </div>
+                            <!-- logo -->
+
+                            <!-- menu start -->
+                            <nav class="main-menu">
+                                <ul>
+                                    <li class="current-list-item"><a th:href="@{/}" href="/home">Home</a>
+
+                                    </li>
+                                    <li><a th:href="@{/about}" href="about.html">About</a></li>
+                                    <li><a th:href="@{/food/search}" href="/food/searh.html">Search</a>
+
+                                    </li>
+                                    <li><a href="news.html">News</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="news.html">News</a></li>
+                                            <li><a href="single-news.html">Single News</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="contact.html">Contact</a></li>
+                                    <li><a href="shop.html">Shop</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="shop.html">Shop</a></li>
+                                            <li><a href="checkout.html">Check Out</a></li>
+                                            <li><a href="single-product.html">Single Product</a></li>
+                                            <li><a href="cart.html">Cart</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <div class="header-icons">
+                                            <a class="shopping-cart" th:href="@{/member/login}" href="member/login"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                                                <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                                                <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+                                            </svg></a>
+                                            <a class="mobile-hide search-bar-icon" href="#"><i class="fas fa-search"></i></a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </nav>
+                            <a class="mobile-show search-bar-icon" href="#"><i class="fas fa-search"></i></a>
+                            <div class="mobile-menu"></div>
+                            <!-- menu end -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end header -->
+    </th:block>
+</body>
+</html>

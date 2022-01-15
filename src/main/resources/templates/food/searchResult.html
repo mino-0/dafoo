@@ -1,0 +1,129 @@
+
+<div class="col-md-6 col-xl-3 offset-xl-2">
+    <div class="nutrition_facts international">
+        <div class="heading black left" th:utext="${#strings.replace(dto.DESC_KOR,' ','&lt;br/&gt;')}">영양 정보</div>
+        <div class="divider thin"></div>
+        <div class="serving_size black serving_size_label">1회 제공량</div>
+        <div class="serving_size black serving_size_value" th:text="|${dto.SERVING_SIZE}g/ml|">1 알</div>
+        <div class="divider thick"></div>
+        <div class="nutrient header black per_serve right">서브 당</div>
+        <div class="divider medium"></div>
+        <div class="nutrient black left">열량</div>
+        <div class="nutrient black right tRight" th:text="|${dto.NUTR_CONT1} Cal|">100Cal</div>
+        <div style="clear:both"></div>
+        <div class="nutrient black left"></div>
+        <div class="nutrient right tRight">6 kcal</div>
+        <div class="divider thin"></div>
+        <div class="nutrient black left">탄수화물</div>
+        <div class="nutrient black right tRight" th:text="|${dto.NUTR_CONT2} g|">0.22g</div>
+
+        <div style="clear:both"></div>
+        <div class="nutrient sub left">당류</div>
+        <div class="nutrient right tRight" th:text="|${dto.NUTR_CONT5} g|">0.04g</div>
+
+        <div class="divider thin"></div>
+        <div class="nutrient black left">단백질</div>
+        <div class="nutrient black right tRight"th:text="|${dto.NUTR_CONT3} g|">0.24g</div>
+        <div class="divider thin"></div>
+        <div class="nutrient black left">지방</div>
+        <div class="nutrient black right tRight" th:text="|${dto.NUTR_CONT4} g|">0.5g</div>
+
+        <div style="clear:both"></div>
+        <div class="nutrient sub left">포화지방</div>
+        <div class="nutrient right tRight" th:text="|${dto.NUTR_CONT8} g|">0.069g</div>
+
+<!--        <div style="clear:both"></div>
+        <div class="nutrient sub left">다불포화지방</div>
+        <div class="nutrient right tRight" th:text="|없음|">0.157g</div>
+
+        <div style="clear:both"></div>
+        <div class="nutrient sub left">불포화 지방</div>
+        <div class="nutrient right tRight" th:text="|없음|">0.246g</div>-->
+
+        <div class="divider thin"></div>
+        <div class="nutrient left">콜레스테롤</div>
+        <div class="nutrient right tRight" th:text="|${dto.NUTR_CONT7} g|">0mg</div>
+
+<!--        <div class="divider thin"></div>
+        <div class="nutrient left">식이섬유</div>
+        <div class="nutrient right tRight" th:text="|없음|">0.1g</div>-->
+
+        <div class="divider thin"></div>
+        <div class="nutrient left">나트륨</div>
+        <div class="nutrient right tRight" th:text="|${dto.NUTR_CONT6} g|">0mg</div>
+
+<!--        <div class="divider thin"></div>
+        <div class="nutrient left">칼륨</div>
+        <div class="nutrient right tRight" th:text="|없음|">7mg</div>-->
+
+        <div class="divider medium"></div>
+    </div>
+</div>
+<div class="col-md-6 col-xl-5 panel">
+    <div class="factPanel">
+        <h4>영양 요약:</h4>
+        <table class="generic spaced">
+            <tr>
+                <td class="fact">
+                    <div class="factTitle">Cal</div>
+                    <div class="factValue" th:text="|${dto.NUTR_CONT1}cal|">6</div>
+                </td>
+                <td></td>
+                <td class="fact">
+                    <div class="factTitle">지방</div>
+                    <div class="factValue" th:text="|${dto.NUTR_CONT4}g|">0.5g</div>
+                </td>
+                <td></td>
+                <td class="fact">
+                    <div class="factTitle">탄수화물</div>
+                    <div class="factValue" th:text="|${dto.NUTR_CONT2}g|">0.22g</div>
+                </td>
+                <td></td>
+                <td class="fact">
+                    <div class="factTitle">단백질</div>
+                    <div class="factValue" th:text="|${dto.NUTR_CONT3}g|">0.24g</div>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div>
+        <div class="table-responsive addOption">
+            <table class="table">
+                <thead>
+                <tr>
+                    <th colspan="2">
+                        다이어리 추가하기
+                    </th>
+
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>날짜</td>
+                    <td><input type="date" id="name"></td>
+                </tr>
+                <tr>
+                    <td>시간</td>
+                    <td>
+                        <select name="day" id="day">
+                            <option value="아침">아침</option>
+                            <option value="점심">점심</option>
+                            <option value="저녁">저녁</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>양</td>
+                    <td><input type="text" >인분</td>
+
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <button class="btn btn-dark">추가</button>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

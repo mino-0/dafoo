@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	  layout:decorate="layout/basic">
+<head>
+	<link rel="stylesheet" th:href="@{/css/search/search.css}" href="/css/search/search.css">
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+	<script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
+</head>
+<body>
+	<th:block layout:fragment="content">
+		<!-- breadcrumb-section -->
+		<div class="breadcrumb-section breadcrumb-bg">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-8 offset-lg-2 text-center">
+						<div class="breadcrumb-text">
+							<p>Fresh adn Organic</p>
+							<h1>SEARCH FOOD</h1>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container" style="border-style: solid;">
+			<div class="row">
+				<div class="col-md-12 col-xl-8 offset-xl-2">
+					<div class="input-group">
+						<span class="input-group-text">음식</span>
+						<input class="form-control" type="text" id="searchFood" />
+						<button class="btn btn-dark" id="searchBtn" type="button">검색</button></div>
+				</div>
+			</div>
+			<form action="">
+				<input type="hidden" id="food_cd" name="food_cd" value="">
+				<div class="row" id="searchResult">
+					<div class="container col-md-8 text-center noSearch">
+						<h5>검색어를 입력하세요</h5>
+					</div>
+
+				</div>
+			</form>
+		</div>
+		<script th:src="@{/js/search/foodSearch.js}"></script>
+	</th:block>
+
+	</body>
+</html>
