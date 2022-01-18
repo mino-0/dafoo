@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org"
 	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	  xmlns:sec="http://www.thymeleaf.org/extras/spring-security"
 	  layout:decorate="layout/basic">
 
 <head>
@@ -42,10 +43,6 @@
 											<a href="#" class="fa fa-question-circle"></a>
 										</div>
 										<div class="form-group">
-											<div class="main-checkbox">
-												<input type="checkbox" value="None" id="checkbox1" name="check">
-												<label for="checkbox1"></label></div>
-											<span class="text">Remember me</span>
 											<button type="submit" class="btn btn-default ml-2">SignIn</button>
 											<a th:href="@{/member/register}" class="btn btn-sm">SignUp</a>
 										</div>
