@@ -41,6 +41,7 @@ $(function() {
             console.log(event);
         }
     });
+    //검색어 자동완성
 
     $('#searchBtn').on("click",function(){
         const foodname = $("#searchFood").val();
@@ -77,4 +78,6 @@ $(function() {
             })
             .catch((error)=>console.log('error입니다.'))
     })
+
+
 });

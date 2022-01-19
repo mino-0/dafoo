@@ -5,6 +5,7 @@ import lombok.Data;
 @Data
 public class foodResultDto {
     private String DESC_KOR;
+    private String FOOD_CD;
     private String SERVING_SIZE;
     private String NUTR_CONT1;
     private String NUTR_CONT2;

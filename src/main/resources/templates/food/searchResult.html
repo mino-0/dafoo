@@ -88,24 +88,24 @@
     </div>
     <div>
         <div class="table-responsive addOption">
+                <input type="hidden" id="food_cd" name="food_cd" th:value="${dto.FOOD_CD}">
             <table class="table">
                 <thead>
                 <tr>
                     <th colspan="2">
                         다이어리 추가하기
                     </th>
-
                 </tr>
                 </thead>
                 <tbody>
                 <tr>
                     <td>날짜</td>
-                    <td><input type="date" id="name"></td>
+                    <td><input type="date" id="regDate" name="regDate" ></td>
                 </tr>
                 <tr>
                     <td>시간</td>
                     <td>
-                        <select name="day" id="day">
+                        <select name="day" id="day" >
                             <option value="아침">아침</option>
                             <option value="점심">점심</option>
                             <option value="저녁">저녁</option>
@@ -114,12 +114,12 @@
                 </tr>
                 <tr>
                     <td>양</td>
-                    <td><input type="text" >인분</td>
+                    <td><input type="text" name="serving">인분</td>
 
                 </tr>
                 <tr>
                     <td colspan="2">
-                        <button class="btn btn-dark">추가</button>
+                        <button type="submit" class="btn btn-dark">추가</button>
                     </td>
                 </tr>
                 </tbody>
@@ -127,3 +127,11 @@
         </div>
     </div>
 </div>
+<script>
+    $(function () {
+        $('#regDate').on("change", function () {
+            let regDate = $('#regDate').val();
+            console.log(regDate)
+        });
+    });
+</script>

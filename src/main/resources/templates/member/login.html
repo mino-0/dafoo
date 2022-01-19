@@ -25,20 +25,23 @@
 						<div class="container">
 							<div class="row ">
 								<div class="col-md-9 mx-auto">
-									<form class="form-horizontal" method="post" th:action="@{/member/login}">
+									<form class="form-horizontal" method="post" th:action="@{/member/loginProcess}">
 										<h1>SignIn</h1>
 										<div class="alert alert-danger" role="alert" th:if="${param.error}">
-											A simple danger alert—check it out!
+											아이디와 비밀번호를 확인하세요
 										</div>
 										<div class="alert alert-success" role="alert" th:if="${param.logout}">
-											A simple success alert—check it out!
+											로그아웃에 성공했습니다.
+										</div>
+										<div class="alert alert-success" role="alert" th:if="${param.success}">
+											회원가입에 성공했습니다.
 										</div>
 										<div class="form-group">
 											<input type="text" class="form-control" id="inputEmail3" name="email" placeholder="Email or Username">
 											<i class="fa fa-user"></i>
 										</div>
 										<div class="form-group help">
-											<input type="password" class="form-control" id="inputPassword3" name="password" placeholder="Password">
+											<input type="password" class="form-control" id="inputPassword3" name="pw" placeholder="Password">
 											<i class="fa fa-lock"></i>
 											<a href="#" class="fa fa-question-circle"></a>
 										</div>

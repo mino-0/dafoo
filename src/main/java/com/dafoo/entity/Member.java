@@ -14,6 +14,7 @@ import java.util.Set;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Member extends BaseEntity {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long mid;
@@ -23,6 +24,8 @@ public class Member extends BaseEntity {
     private String status;
     private boolean sns;
 
+
+
     @ElementCollection(fetch = FetchType.LAZY)
     @Builder.Default
     private Set<MemberRole> roleSet = new HashSet<>();
@@ -30,4 +33,5 @@ public class Member extends BaseEntity {
     public void addMemberRole(MemberRole memberRole) {
         roleSet.add(memberRole);
     }
+
 }

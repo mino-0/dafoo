@@ -3,10 +3,8 @@ package com.dafoo.service;
 import com.dafoo.entity.Member;
 import com.dafoo.entity.MemberRole;
 import com.dafoo.repository.MemberRepository;
-import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
@@ -23,7 +21,8 @@ public class MemberServiceImpl implements MemberService{
     public String addMember(Member memberinfo) {
         Optional<Member> result = memberRepository.findByEmail(memberinfo.getEmail(), false);
         if (result.isPresent()) {
-            return "already using Id";
+            log.info("Already Using Id");
+            return "failed";
         }
         else {
             Member member = Member.builder()
@@ -35,7 +34,8 @@ public class MemberServiceImpl implements MemberService{
                     .build();
             member.addMemberRole(MemberRole.USER);
             memberRepository.save(member);
-            return "Success Register";
+            log.info("Success Register ID");
+            return "success";
         }
     }
 

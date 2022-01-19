@@ -18,14 +18,6 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 @RequiredArgsConstructor
 @Slf4j
 public class securityConfig extends WebSecurityConfigurerAdapter {
-    private final MemberDetailService memberDetailService;
-    //    @Override
-//    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-//        auth.inMemoryAuthentication()
-//                .withUser("user")
-//                .password(passwordEncoder().encode("1111"))
-//                .roles("USER");
-//    }
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http
@@ -36,11 +28,13 @@ public class securityConfig extends WebSecurityConfigurerAdapter {
                     .and()
                 .formLogin()
                     .loginPage("/member/login")
+                    .loginProcessingUrl("/member/loginProcess")
                     .usernameParameter("email")
                     .passwordParameter("pw")
                     .permitAll()
                     .and()
                 .logout()
+                .logoutUrl("/member/logout")
                     .permitAll();
         http
                 .csrf().disable();

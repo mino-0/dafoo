@@ -32,7 +32,7 @@
 						<button class="btn btn-dark" id="searchBtn" type="button">검색</button></div>
 				</div>
 			</div>
-			<form action="">
+			<form action="/" th:action="@{/food/addFood}" th:method="post">
 				<input type="hidden" id="food_cd" name="food_cd" value="">
 				<div class="row" id="searchResult">
 					<div class="container col-md-8 text-center noSearch">
