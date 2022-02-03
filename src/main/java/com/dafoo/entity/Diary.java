@@ -15,10 +15,10 @@ public class Diary {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long did;
-    private Long day;
-    private Long serving;
+    private String day;
+    private String serving;
+    private String regDate;
     private String food_cd;
-    private LocalDate regDate;
 
     @ManyToOne
     @JoinColumn(name = "mid")

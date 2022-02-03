@@ -38,14 +38,11 @@ public class MemberDetailService implements UserDetailsService {
                 member.getPw(),
                 member.getNickname(),
                 member.isSns(),
+                member.getMid(),
                 member.getRoleSet().stream().map(role ->
                         new SimpleGrantedAuthority("ROLE_" + role.name())).collect(Collectors.toSet()));
         log.info("memberDTO : " + memberDTO.toString());
-        log.info("username : " + memberDTO.getUsername());
-        log.info("password : " + memberDTO.getPassword());
-        log.info("Nickname : " + memberDTO.getNickname());
-        log.info("Authorities : " + memberDTO.getAuthorities());
-        log.info("sns : "+memberDTO.isSns());
+
         return memberDTO;
     }
 }

@@ -1,0 +1,49 @@
+ .widget {
+     height: 60px;
+     width: 20%;
+     text-align: center;
+     background-color: #00b4ef;
+     margin: 0 auto;
+ }
+.day{
+    width: 100%;
+}
+.content{
+    width: 100%;
+}
+.total-info{
+    float: right;
+    margin-right: 50px;
+    width: 27%;
+    text-align: center;
+}
+.sub{
+    width: 60px;
+}
+.day-list{
+    clear: both;
+}
+
+table{
+    border: 1px solid black;
+}
+.main-content-section{
+}
+.day-info{
+    width: 90%;
+    margin:0 auto;
+}
+.diary-wrap{
+    margin:100px auto;
+}
+.day-info{
+    margin-top:20px;
+}
+.detail-info{
+    width: 100%;
+    text-align: center;
+
+}
+.sub-title{
+    width:70%;
+}

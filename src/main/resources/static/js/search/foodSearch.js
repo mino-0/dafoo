@@ -72,6 +72,7 @@ $(function() {
                         $('.noSearch').empty();
                         $('.noSearch').remove();
                         document.getElementById("searchResult").innerHTML = text;
+                        document.getElementById('regDate').value = new Date().toISOString().substring(0, 10);
                         console.log("화면 안됐는데 뜨면안됨")
                     })
                 })

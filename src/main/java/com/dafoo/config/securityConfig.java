@@ -22,20 +22,22 @@ public class securityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http
                 .authorizeRequests()
-                    .antMatchers("/", "/main", "/index","/member/login", "/member/register", "/api/**", "/assets/**", "/css/**").permitAll()
-                    .antMatchers("/food/**").hasRole("USER")
-                    .anyRequest().authenticated()
-                    .and()
+                .antMatchers("/", "/main", "/index", "/member/login", "/member/register", "/api/**", "/assets/**", "/css/**").permitAll()
+                .antMatchers("/food/**").hasRole("USER")
+                .anyRequest().authenticated()
+                .and()
                 .formLogin()
-                    .loginPage("/member/login")
-                    .loginProcessingUrl("/member/loginProcess")
-                    .usernameParameter("email")
-                    .passwordParameter("pw")
-                    .permitAll()
-                    .and()
+                .loginPage("/member/login")
+                .loginProcessingUrl("/member/loginProcess")
+                .usernameParameter("email")
+                .passwordParameter("pw")
+                .permitAll()
+                .and()
                 .logout()
                 .logoutUrl("/member/logout")
-                    .permitAll();
+                .permitAll()
+                .and()
+                .headers(headers -> headers.cacheControl(cache -> cache.disable()));
         http
                 .csrf().disable();
 

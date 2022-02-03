@@ -1,5 +1,7 @@
 package com.dafoo.service;
 
+import com.dafoo.dto.foodResultDto;
+import com.google.gson.Gson;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
@@ -9,6 +11,7 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLEncoder;
+import java.util.Map;
 
 @Service
 @Slf4j

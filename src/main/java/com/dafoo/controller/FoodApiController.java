@@ -1,10 +1,14 @@
 package com.dafoo.controller;
 
+import com.dafoo.dto.foodResultDto;
 import com.dafoo.service.foodApiService;
+import com.google.gson.Gson;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import java.io.IOException;
+import java.util.Map;
 
 @RestController
 @RequestMapping(value = "/foodApi")

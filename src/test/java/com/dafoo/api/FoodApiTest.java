@@ -1,12 +1,15 @@
 package com.dafoo.api;
 
 import com.dafoo.controller.FoodApiController;
+import com.dafoo.service.foodApiService;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
+import groovy.util.logging.Slf4j;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.context.annotation.Bean;
 import org.springframework.test.web.servlet.MockMvc;
 
 import java.io.BufferedReader;
@@ -17,10 +20,12 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLEncoder;
 import java.util.HashSet;
+import java.util.Map;
 import java.util.Set;
 
 @WebMvcTest(controllers = FoodApiController.class)
 public class FoodApiTest {
+
 
     @Test
     void apiTest() throws IOException {
@@ -55,4 +60,5 @@ public class FoodApiTest {
 
         System.out.println(sb.toString());
     }
-}
+
+    }

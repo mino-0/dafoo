@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	  xmlns:sec="httpL//www.thymeleaf.org/extras/spring-security"
+	  layout:decorate="layout/basic">
+<head>
+	<link rel="stylesheet" href="" th:href="@{/css/diary/mydiary.css}">
+</head>
+<body>
+<th:block layout:fragment="content">
+
+	<!-- breadcrumb-section -->
+	<div class="breadcrumb-section breadcrumb-bg">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 offset-lg-2 text-center">
+					<div class="breadcrumb-text">
+						<p>Organic Information</p>
+						<h1>News Article</h1>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end breadcrumb section -->
+	<div class="container diary-wrap">
+		<div class="row">
+			<div class="widget">
+				<input type="date" id="diaryDate"  name="diaryDate">
+			</div>
+			<div class="widget">
+				칼로리
+			</div>
+			<div class="widget">
+				흠
+			</div>
+			<div class="widget">
+				흠
+			</div>
+		</div>
+		<div class="container main-content-section col-lg-11" id="info">
+			<div class="row">
+				<h3>MY DIARY</h3>
+			</div>
+			<div>
+				<table class="total-info">
+					<tbody>
+					<tr>
+						<td class="sub">칼로리</td>
+						<td class="sub">탄수화물</td>
+						<td class="sub">단백질</td>
+						<td class="sub">지방</td>
+					</tr>
+					<tr>
+						<td class="sub">5</td>
+						<td class="sub">6</td>
+						<td class="sub">7</td>
+						<td class="sub">8</td>
+					</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="container day-list">
+				<div class="row">
+					<div class="day">
+						<table class="day-info">
+							<tbody>
+							<td class="sub-title"><h5>아침</h5></td>
+							<td>
+                                <table class="detail-info">
+                                <tr>
+                                    <td class="sub" id="sub1Result">5</td>
+                                    <td class="sub">6</td>
+                                    <td class="sub">7</td>
+                                    <td class="sub">8</td>
+                                </tr>
+                                </table>
+                            </td>
+							</tbody>
+						</table>
+					</div>
+					<div class="content">
+						<table class="day-info">
+							<tr th:each="diary : ${diary}" th:if="${diary.key.day}=='0'">
+								<td class="sub-title" th:text="${diary.value.DESC_KOR}">음식이름</td>
+								<td>
+									<table class="detail-info">
+										<tr>
+											<td class="sub1" th:text="${diary.value.NUTR_CONT1}">5</td>
+											<td class="sub2" th:text="${diary.value.NUTR_CONT2}">6</td>
+											<td class="sub3" th:text="${diary.value.NUTR_CONT3}">7</td>
+											<td class="sub4" th:text="${diary.value.NUTR_CONT4}">8</td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+				<div class="row">
+					<div class="day">
+						<table class="day-info">
+							<tbody>
+							<td class="sub-title">
+                                <h5>점심</h5>
+                            </td>
+							<td>
+                                <table class="detail-info">
+                                    <tr>
+                                        <td class="sub">5</td>
+                                        <td class="sub">6</td>
+                                        <td class="sub">7</td>
+                                        <td class="sub">8</td>
+                                    </tr>
+                                </table>
+                            </td>
+							</tbody>
+						</table>
+					</div>
+					<div class="content">
+						<table class="day-info">
+							<tr th:each="diary : ${diary}" th:if="${diary.key.day}=='1'">
+								<td class="sub-title" th:text="${diary.value.DESC_KOR}">음식이름</td>
+								<td>
+									<table class="detail-info">
+										<tr>
+											<td class="sub1" th:text="${diary.value.NUTR_CONT1}">5</td>
+											<td class="sub2" th:text="${diary.value.NUTR_CONT2}">6</td>
+											<td class="sub3" th:text="${diary.value.NUTR_CONT3}">7</td>
+											<td class="sub4" th:text="${diary.value.NUTR_CONT4}">8</td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+				<div class="row">
+					<div class="day">
+						<table class="day-info">
+							<tbody>
+							<td class="sub-title"><h5>저녁</h5></td>
+							<td>
+                                <table class="detail-info">
+                                    <tr>
+                                        <td class="sub">5</td>
+                                        <td class="sub">6</td>
+                                        <td class="sub">7</td>
+                                        <td class="sub">8</td>
+                                    </tr>
+                                </table>
+                            </td>
+							</tbody>
+						</table>
+					</div>
+					<div class="content">
+						<table class="day-info">
+							<tr th:each="diary : ${diary}" th:if="${diary.key.day}=='2'">
+								<td class="sub-title" th:text="${diary.value.DESC_KOR}">음식이름</td>
+								<td>
+									<table class="detail-info">
+										<tr>
+											<td class="sub1" th:text="${diary.value.NUTR_CONT1}">5</td>
+											<td class="sub2" th:text="${diary.value.NUTR_CONT2}">6</td>
+											<td class="sub3" th:text="${diary.value.NUTR_CONT3}">7</td>
+											<td class="sub4" th:text="${diary.value.NUTR_CONT4}">8</td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script th:inline="javascript" th:src="@{/js/diary/mydiary.js}"></script>
+</th:block>
+</body>
+</html>

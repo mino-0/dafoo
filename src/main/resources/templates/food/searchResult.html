@@ -88,7 +88,9 @@
     </div>
     <div>
         <div class="table-responsive addOption">
+            <form action="" th:action="@{/diary/addFood}" method="post">
                 <input type="hidden" id="food_cd" name="food_cd" th:value="${dto.FOOD_CD}">
+                <input type="hidden" id="mId" name="mId">
             <table class="table">
                 <thead>
                 <tr>
@@ -100,21 +102,23 @@
                 <tbody>
                 <tr>
                     <td>날짜</td>
-                    <td><input type="date" id="regDate" name="regDate" ></td>
+                    <td><label for="regDate"></label><input type="date" id="regDate" name="regDate" ></td>
                 </tr>
                 <tr>
                     <td>시간</td>
                     <td>
-                        <select name="day" id="day" >
-                            <option value="아침">아침</option>
-                            <option value="점심">점심</option>
-                            <option value="저녁">저녁</option>
+                        <label for="day"></label><select name="day" id="day" >
+                            <option value="0">아침</option>
+                            <option value="1">점심</option>
+                            <option value="2">저녁</option>
                         </select>
                     </td>
                 </tr>
                 <tr>
                     <td>양</td>
-                    <td><input type="text" name="serving">인분</td>
+                    <td><label>
+                        <input type="text" name="serving">
+                    </label>인분</td>
 
                 </tr>
                 <tr>
@@ -124,14 +128,9 @@
                 </tr>
                 </tbody>
             </table>
+            </form>
         </div>
     </div>
 </div>
 <script>
-    $(function () {
-        $('#regDate').on("change", function () {
-            let regDate = $('#regDate').val();
-            console.log(regDate)
-        });
-    });
 </script>

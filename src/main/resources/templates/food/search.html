@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org"
 	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	  xmlns:sec="http://www.thymeleaf.org/extras/spring-security"
 	  layout:decorate="layout/basic">
 <head>
 	<link rel="stylesheet" th:href="@{/css/search/search.css}" href="/css/search/search.css">
@@ -29,18 +30,17 @@
 					<div class="input-group">
 						<span class="input-group-text">음식</span>
 						<input class="form-control" type="text" id="searchFood" />
-						<button class="btn btn-dark" id="searchBtn" type="button">검색</button></div>
+						<button class="btn btn-dark" id="searchBtn" type="button">검색</button>
+						<button class="btn btn-primary">다이어리</button>
+					</div>
 				</div>
 			</div>
-			<form action="/" th:action="@{/food/addFood}" th:method="post">
 				<input type="hidden" id="food_cd" name="food_cd" value="">
 				<div class="row" id="searchResult">
 					<div class="container col-md-8 text-center noSearch">
 						<h5>검색어를 입력하세요</h5>
 					</div>
-
 				</div>
-			</form>
 		</div>
 		<script th:src="@{/js/search/foodSearch.js}"></script>
 	</th:block>
